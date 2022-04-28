@@ -40,7 +40,7 @@ public:
             // checking for sub-string from ith index to
             // jth index iff str[i+1] to str[j-1] is a
             // palindrome
-            if (table[i + 1][j - 1] && str[i] == str[j]) {
+            if ( str[i] == str[j] && table[i + 1][j - 1]) {
                 table[i][j] = true;
  
                 if (k > maxLength) {
