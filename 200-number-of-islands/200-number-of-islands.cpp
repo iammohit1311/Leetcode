@@ -1,7 +1,7 @@
 class Solution {
 public:
     int numIslands(vector<vector<char>>& grid) {
-        int m = grid.size(), n = m ? grid[0].size() : 0, islands = 0;
+        int m = grid.size(), n = grid[0].size(), islands = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1') {
