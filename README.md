@@ -1,2 +1,2 @@
 # Leetcode
-LOL
+Hello Leetcode! Are you ready for me ?
