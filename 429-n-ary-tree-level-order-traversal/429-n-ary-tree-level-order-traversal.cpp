@@ -21,19 +21,22 @@ public:
 class Solution { // 20 ms, faster than 86.78%
 public:
     vector<vector<int>> levelOrder(Node* root) {
-        if (root == nullptr) return {};
+        if (root == NULL) return {};
         queue<Node*> q;
         q.push(root);
         vector<vector<int>> ans;
         while (!q.empty()) {
-            ans.emplace_back();
-            for (int i = q.size(); i >= 1; i--) {
-                Node* curr = q.front(); q.pop();
-                ans.back().push_back(curr->val);
-                for (Node* child : curr->children) {
+            int n = q.size();
+            vector<int> v;
+            //ans.emplace_back();
+            for (int i = 0; i < n; i++) {
+                Node* temp = q.front(); q.pop();
+                v.push_back(temp->val);
+                for (Node* child : temp->children) {
                     q.push(child);
                 }
             }
+            ans.push_back(v);
         }
         return ans;
     }
