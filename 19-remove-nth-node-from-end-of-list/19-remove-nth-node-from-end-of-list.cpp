@@ -26,9 +26,9 @@ public:
         
         if(k == 0)
         {
-            ListNode* temp = head;
+            //ListNode* temp = head;
             head = head->next;
-            temp->next = NULL;
+            //temp->next = NULL;
             return head;
         }
         
